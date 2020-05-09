@@ -6,13 +6,16 @@ import MyLogo from '../images/mylogo.png';
 
 const Styles = Styled.section`
   .header {
-    background-color: orange;
+    // background-color: orange;
     marginBottom: 1.45rem;
     height: 70px;
     padding: 15px;
     font-family: 'Josefin Sans', sans-serif;
     padding-right: 10%;
     padding-left: 10%;
+    position: fixed;
+    top: 0;
+    width: 100%
   }
   .links {
     float: right;
@@ -27,7 +30,7 @@ const Styles = Styled.section`
 
   }
   .link:hover {
-    color: orange;
+    color: #f9a743;
   }
   .header .link {
     float: left;
