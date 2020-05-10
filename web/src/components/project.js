@@ -70,14 +70,14 @@ const Project = (props) => {
         <div className="card">
             <div className="inside">
                 <div className="image">
-                    <img src={image}></img>
+                     <img src={image}></img> 
                 </div>
                 <div className="title">
                     <span className="large"> { title } </span> <br/>
-                    <span className="small"> { description } </span>
+                    <span className="small"> { subtitle } </span>
                 </div>
                 <div className="tech">
-                    { new_tech.map(item => <span> item </span> )}
+                    { new_tech.map(item => <span> {item} </span> )}
                 </div>
                 <div className="button">
                     <button className='btn'> Learn more ! </button>

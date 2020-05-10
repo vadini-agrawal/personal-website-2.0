@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Styled from 'styled-components'
 import Project from './project.js'
-import { graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 
 const Styles = Styled.section`
@@ -17,30 +17,41 @@ const Styles = Styled.section`
 
 
 const Projects = (props) => {
-    const data = graphql`
-        query getProjects {
-            projects: allProject {
-                title
-                subtitle
-                description
-                mainImage {
+    const data = useStaticQuery(graphql`
+        query {
+            allSanityProject {
+                edges {
+                node {
+                    dates
+                    description
+                    mainImage {
                     asset {
-                        path
+                        fluid {
+                        src
+                        }
                     }
+                    }
+                    subtitle
+                    title
+                    tech
+                    url
                 }
-                tech
-                url
-                dates 
+                }
             }
         }
-    `
-    const projectsMarkup = data.allProject.map(item => 
-        <Project title={item.title} subtitle={item.title} description={item.description} image={item.mainImage.asset.path} tech={item.tech} url={item.url} dates={item.dates} />
+    `);
+    //   );
+    // const { data } = useStaticQuery(graphql`
+       
+    // `);
+
+    const projectsMarkup = data.allSanityProject.edges.map(item => 
+        <Project title={item.node.title} subtitle={item.node.title}  image={item.node.mainImage.asset.fluid.src} description={item.node.description} tech={item.node.tech} url={item.node.url} dates={item.node.dates} />
     )
     return (
         <Styles>
         <div className="container">
-            {projectsMarkup}
+            { projectsMarkup }
             {/* <Project />
             <Project />
             <Project />
