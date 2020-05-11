@@ -3,6 +3,11 @@ import PropTypes from "prop-types"
 import React from "react"
 import Styled from 'styled-components';
 import MyLogo from '../images/mylogo.png';
+import Twitter from '../images/twitter.svg';
+import Medium from '../images/medium.svg';
+import LinkedIn from '../images/linkedin.svg';
+import Github from '../images/github.svg';
+import Email from '../images/email.svg';
 
 const Styles = Styled.section`
   .footer {
@@ -35,6 +40,14 @@ const Styles = Styled.section`
   p {
       font-size: 15px;
   }
+  .icons img {
+    height: 35px;
+    width: 35px;
+    display: inline-block;
+    margin: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 `;
 
 
@@ -55,8 +68,24 @@ const Footer = () => (
           </Link>
           <Link className="link" to="/blog">
              BLOG
-          </Link>
-          <br />  <br />
+            </Link>
+          <div className="icons">
+              <a href="http://www.linkedin.com/in/vadini-agrawal" target="_blank">
+                <img  src={LinkedIn} /> 
+              </a>
+              <a href="http://www.github.com/vadini-agrawal" target="_blank">
+                  <img  src={Github} /> 
+              </a>
+              <a href="mailto:vadini@gatech.edu" target="_blank">
+                  <img  src={Email} /> 
+              </a>
+              <a href="https://twitter.com/@a_vadini" target="_blank">
+                  <img  src={Twitter} /> 
+              </a>
+              <a  href="http://medium.com/@vadini/" target="_blank">
+                  <img  src={Medium} /> 
+              </a>
+          </div>
           <p>
             © {new Date().getFullYear()}, Built with
             {` `}
@@ -70,19 +99,5 @@ const Footer = () => (
 export default Footer
 
   {/* <div class="copyright-text"> 
-      <a class="contact-link" href="http://www.linkedin.com/in/vadini-agrawal" target="_blank">
-          <img class="contact-icon" src="https://d33wubrfki0l68.cloudfront.net/c0c3cbbfb31db70e76ea42c92ae55ec68b801d5b/fd624/linkedin.svg"> 
-      </a>
-      <a class="contact-link" href="http://www.github.com/vadini-agrawal" target="_blank">
-          <img class="contact-icon" src="https://d33wubrfki0l68.cloudfront.net/f3149af77dad25218e9992b719953fb8efb32b78/3adfa/github.svg"> 
-      </a>
-      <a class="contact-link" href="mailto:vadini@gatech.edu" target="_blank">
-          <img class="contact-icon" src="https://d33wubrfki0l68.cloudfront.net/df7aaa4c3dfc864755d83193b8418cf9a6e3a0b8/03dbe/mail.svg"> 
-      </a>
-      <a class="contact-link" href="https://twitter.com/@a_vadini" target="_blank">
-          <img class="contact-icon" src="https://d33wubrfki0l68.cloudfront.net/0e267bfec1fd7aee0481f47707232bd0dfe9aa63/29cfc/twitter.png"> 
-      </a>
-      <a class="contact-link" href="http://medium.com/@vadini/" target="_blank">
-          <img class="contact-icon" src="https://d33wubrfki0l68.cloudfront.net/dfbff2e45d03aa48287ba3b8419960c67777d5fd/a9099/medium.png"> 
-      </a>
+
   </div> */}

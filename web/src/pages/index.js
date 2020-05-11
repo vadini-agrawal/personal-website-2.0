@@ -8,7 +8,7 @@ import Styled from 'styled-components';
 import Headshot from '../images/VadiniAgrawalPicture.jpg';
 import Projects from "../components/projects";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Footer from "../components/footer";
 
 import MyLogo from '../images/mylogo.png';
 
@@ -76,7 +76,7 @@ const IndexPage = () => (
     <Header />
     <div className="block" >
       <div className="inside">
-      <h1 className="big-header"> Hi! <br/> I'm Vadini Agrawal.</h1>
+      <h1 className="big-header"> Hi! 🎊 <br/> I'm Vadini Agrawal.</h1>
       <h3>I'm a product-oriented, purpose-driven computer science student. </h3>
       <a className="btn btn-main" href="#" target="_blank" role="button" download="">Download my resume!</a>
       </div>

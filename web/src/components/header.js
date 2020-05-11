@@ -1,12 +1,11 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 import Styled from 'styled-components';
 import MyLogo from '../images/mylogo.png';
 
 const Styles = Styled.section`
   .header {
-    // background-color: orange;
+    // background-color: #f9a743;
     marginBottom: 1.45rem;
     height: 70px;
     padding: 15px;
@@ -39,6 +38,7 @@ const Styles = Styled.section`
     height: 40px;
     width: 40px;
     margin: auto;
+    box-shadow: 5px;
   }
 `;
 
@@ -65,7 +65,7 @@ const Header = ({ siteTitle }) => (
           PROJECTS
         </Link>
         <Link
-          to="#blog"
+          to="/blog"
           className="link"
         >
           BLOG
@@ -75,12 +75,12 @@ const Header = ({ siteTitle }) => (
   </Styles>
 )
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+// Header.propTypes = {
+//   siteTitle: PropTypes.string,
+// }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
+// Header.defaultProps = {
+//   siteTitle: ``,
+// }
 
 export default Header
