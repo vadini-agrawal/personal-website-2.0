@@ -4,15 +4,34 @@ export default {
     title: 'Blog post',
     type: 'document',
     fields: [
-      // ... other fields ...
       {
-        name: 'name',
-        title: 'Name',
+        name: 'mainImage',
+        title: 'Main image',
+        type: 'image'
+      },
+      {
+        name: 'title',
+        title: 'Title',
+        type: 'string'
+      },
+      {
+        name: 'subtitle',
+        title: 'Subtitle',
         type: 'string'
       },
       {
         name: 'body',
         title: 'Body',
+        type: 'blockContent'
+      },
+      {
+        name: 'publishedAt',
+        title: 'Published At',
+        type: 'date'
+      },
+      {
+        name: 'linkStub',
+        title: 'LinkStub',
         type: 'string'
       }
     ]
