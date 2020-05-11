@@ -5,7 +5,7 @@ import MyLogo from '../images/mylogo.png';
 
 const Styles = Styled.section`
   .header {
-    // background-color: #f9a743;
+    background-color: white;
     marginBottom: 1.45rem;
     height: 70px;
     padding: 15px;
@@ -13,6 +13,7 @@ const Styles = Styled.section`
     padding-right: 10%;
     padding-left: 10%;
     position: fixed;
+    z-index: 102;
     top: 0;
     width: 100%
   }

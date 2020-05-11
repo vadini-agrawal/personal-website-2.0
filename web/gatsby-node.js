@@ -1,3 +1,5 @@
+const { format } = require('date-fns')
+
 /**
  * Implement Gatsby's Node APIs in this file.
  *
@@ -5,43 +7,62 @@
  */
 
 // You can delete this file if you're not using it
-async function createProject (graphql, actions, reporter) {
-    const { createProject } = actions
+async function createBlogPostPages (graphql, actions, reporter) {
+    const { createPage } = actions
     const result = await graphql(`
       {
-        allProject {
-          edges {
-            node {
-              id
-              slug {
-                current
+        allSanityBlogPost {
+            edges {
+              node {
+                id
+                _rawBody
+                subtitle
+                title
+                _createdAt
+                linkStub
+                mainImage {
+                  asset {
+                    fluid {
+                      src
+                    }
+                  }
+                }
               }
             }
           }
-        }
       }
     `)
   
     if (result.errors) throw result.errors
   
-    const projectEdges = (result.data.allProject || {}).edges || []
+    const postEdges = (result.data.allSanityBlogPost || {}).edges || []
   
-    projectEdges.forEach(edge => {
-      const id = edge.node.id
-      const slug = edge.node.slug.current
-      const path = `/project/${slug}/`
+    postEdges.forEach((edge, index) => {
+      const { id, linkStub } = edge.node
+    //   const dateSegment = format(_createdAt, 'YYYY-MM')
+      const path = `/blog/${linkStub}`
+      console.log(id)
+      reporter.info(`Creating blog post page: ${path}`)
   
-      reporter.info(`Creating project page: ${path}`)
-  
-      createProject ({
+      createPage({
         path,
-        component: require.resolve('./src/components/project.js'),
+        component: require.resolve('./src/template/blog-post.js'),
         context: { id }
       })
     })
   }
 
+async function createBlogPage (graphql, actions, reporter) {
+    const { createPage } = actions
+    path = `/blog`
+    createPage({
+        path,
+        component: require.resolve('./src/pages/blog.js'),
+    })
+  }
+
 exports.createPages = async ({ graphql, actions, reporter }) => {
     // await createBlogPostPages(graphql, actions, reporter)
-    await createProject(graphql, actions, reporter)
+    await createBlogPostPages(graphql, actions, reporter)
+    await createBlogPage(graphql, actions, reporter)
 }

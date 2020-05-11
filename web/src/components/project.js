@@ -13,39 +13,27 @@ const Styles = Styled.section`
         padding: 10px;
         border: none;
         margin: 20px;
-    }
-    .inside {
-        margin: auto;
+        -moz-box-shadow: 0 15px 40px rgba(250, 167, 68, 0.5);
+        -webkit-box-shadow: 0 15px 40px rgba(249, 167, 68, 0.5);
+        box-shadow: 0 15px 40px rgba(249, 167, 68, 0.5);
     }
     img {
         height: 280px;
         width: 230px;
         object-fit: cover;
-        transition: height 0.4s;
+        transition: display 0.4s;
         z-index: 1;
-        position: absolute;
+        // position: absolute;
         top: 10px;
         left: 10px;
-    }
-    .card:hover img {
-        height: 0px;
-        width: 230px;
-        object-fit: cover;
-    }
-    a {
-        position: absolute;
-        top: 250px;
-        left: 28%;
-    }
-    .card:hover a {
         display: block;
     }
+    .card:hover img {
+        display: none;
+    }
     .title {
-        position: absolute;
-        top: 30px;
-        height: 80px;
-        left: 15px;
         width: 220px;
+        margin-top: 10px;
     }
     .large {
         font-size: 20px;
@@ -57,52 +45,45 @@ const Styles = Styled.section`
         font-size: 15px;
     }
     .tech {
-        position: absolute;
-        top: 220px;
-        height: 45px;
+        // position: absolute;
+        // top: 220px;
+        // height: 45px;
         font-size: 13px;
         width: 220px;
         left: 5%;
     }
+
     .content {
         text-align: center;
+        display: none;
+        position: relative;
     }
+
+    .card:hover .content {
+        display: block;
+    }
+    
     .btn {
-        height: 38px;
+        padding: 10px;
         font-size: 15px;
-        border-radius: 15px;
-        display: inline-block;
         background-color: #fff;
         -moz-box-shadow: 0 15px 40px rgba(249, 167, 68, 0.5);
         -webkit-box-shadow: 0 15px 40px rgba(249, 167, 68, 0.5);
         box-shadow: 0 15px 40px rgba(249, 167, 68, 0.5);
     }
+
     .btn:hover {
           background-color: #fff;
           color: #f9a743; 
     }
     .pill {
-        background-color: red;
+        background-color: #fd664d;
         color: white;
         margin-right: 5px;
         margin-bottom: 5px;
         padding: 2px;
+        border-radius: 3px;
     }
-    
-    // #modal {
-    //     display: none;
-    // }
-
-    // .modal {
-    //     height: 60vh;
-    //     width: 50vw;
-    //     background-color: #f9a743;
-    //     text-align: center;
-    //     display: flex;
-    //     padding: 10px;
-    //     border: none;
-    //     margin: 20px;
-    // }
 `;
 
 const Project = (props) => {
@@ -115,15 +96,15 @@ const Project = (props) => {
     // this.state = {
     //       isModalOpen: false,
     // }
-    const handleModalOpen = () => {
-        console.log('handleModalOpen: ');
-        document.getElementById({title}).style.display='block';
-    }
+    // const handleModalOpen = () => {
+    //     console.log('handleModalOpen: ');
+    //     document.getElementById({title}).style.display='block';
+    // }
 
-    const handleClose = () => {
-        // this.setState({ open: true });
-        document.getElementById("modal").style.display = 'none';
-    };
+    // const handleClose = () => {
+    //     // this.setState({ open: true });
+    //     document.getElementById("modal").style.display = 'none';
+    // };
     // this.handleModalClose = event => {
     //     console.log('handleModalOpen: ', event);
     //     this.setState({ isModalOpen: false })
@@ -138,12 +119,15 @@ const Project = (props) => {
                 <div className="content">
                 <div className="title">
                     <span className="large"> <b> {title } </b> </span> <br/>
+                    <span className="medium"> { description } </span> <br/>
                     <span className="small"> { subtitle } </span>
-                </div>
+                </div> <br />
                 <div className="tech">
                     { new_tech.map(item => <span className="pill"> {item} </span> )}
+                </div> <br />
+                <div >
+                    <a className="btn" href={url} target="_blank">Learn more!</a>
                 </div>
-                <a className="btn" href={url} target="_blank">Learn more!</a>
                 </div>
                 {/* <div id="this_modal">
                     

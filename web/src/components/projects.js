@@ -56,11 +56,6 @@ const Projects = (props) => {
         <Styles>
         <div className="container">
             { projectsMarkup }
-            {/* { projectModals } */}
-            {/* <Project />
-            <Project />
-            <Project />
-            <Project /> */}
         </div>
         </Styles>
     )

@@ -11,8 +11,9 @@ import Email from '../images/email.svg';
 
 const Styles = Styled.section`
   .footer {
+    background-color: #f4f4f4;
     display: flex;
-    margin-top: 5vh;
+    padding-top: 5vh;
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
     padding-bottom: 3vh;
@@ -48,6 +49,10 @@ const Styles = Styled.section`
     margin-top: 30px;
     margin-bottom: 30px;
   }
+  a {
+    text-decoration: none;
+    color: black;
+  }
 `;
 
 
@@ -82,14 +87,14 @@ const Footer = () => (
               <a href="https://twitter.com/@a_vadini" target="_blank">
                   <img  src={Twitter} /> 
               </a>
-              <a  href="http://medium.com/@vadini/" target="_blank">
+              <a  href="http://medium.com/@vadini/" target="_blank" style={{'border-radius': '4px'}}>
                   <img  src={Medium} /> 
               </a>
           </div>
           <p>
             © {new Date().getFullYear()}, Built with
             {` `}
-            <Link to="https://www.gatsbyjs.org">Gatsby & Sanity </Link>
+            <Link to="https://www.gatsbyjs.org">Gatsby</Link> & <Link to="https://www.sanity.io">Sanity</Link>
           </p>
           </div>
      </div>
