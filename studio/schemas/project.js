@@ -25,6 +25,11 @@
         type: 'string'
       },
       {
+        name: 'longDescription',
+        title: 'Long Description',
+        type: 'blockContent'
+      },
+      {
         name: 'dates',
         title: 'Dates',
         type: 'string'

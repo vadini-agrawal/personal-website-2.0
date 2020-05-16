@@ -2,6 +2,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Styled from 'styled-components'
+import ProjectModal from './projectModal'
 
 const Styles = Styled.section`
     .card {
@@ -84,11 +85,20 @@ const Styles = Styled.section`
         padding: 2px;
         border-radius: 3px;
     }
+
+    .this_modal {
+        opacity: 0;
+        z-index: 2;
+    }
 `;
 
+
 const Project = (props) => {
-    const { _rawBody, title, subtitle, description, image, url, dates, tech } = props;
+    const { _rawBody, id, title, subtitle, description, image, url, dates, tech } = props;
     const new_tech = tech.split(', ');
+    const string = 'project-';
+    const title_s =  title.replace(/ /g, "-");
+    const btn_url = string.concat(title_s);
     // this.title = title;
     // this.image = image;
     // this.description = description;    
@@ -96,19 +106,16 @@ const Project = (props) => {
     // this.state = {
     //       isModalOpen: false,
     // }
-    // const handleModalOpen = () => {
-    //     console.log('handleModalOpen: ');
-    //     document.getElementById({title}).style.display='block';
-    // }
+    const handleModalOpen = () => {
+        console.log('handleModalOpen: ');
+        document.getElementById("this_modal").style.opacity=1;
+    }
 
-    // const handleClose = () => {
-    //     // this.setState({ open: true });
-    //     document.getElementById("modal").style.display = 'none';
-    // };
-    // this.handleModalClose = event => {
-    //     console.log('handleModalOpen: ', event);
-    //     this.setState({ isModalOpen: false })
-    // }
+    const handleClose = () => {
+        // this.setState({ open: true });
+        document.getElementById("modal").style.display = 'none';
+    };
+
     return (
         <Styles>
         <div className="card">
@@ -126,14 +133,13 @@ const Project = (props) => {
                     { new_tech.map(item => <span className="pill"> {item} </span> )}
                 </div> <br />
                 <div >
-                    <a className="btn" href={url} target="_blank">Learn more!</a>
+                    <a className="btn" href={btn_url} target="_blank">Learn more!</a>
+                    {/* <button className="btn" onClick={handleModalOpen} > Open Modal </button> */}
                 </div>
                 </div>
                 {/* <div id="this_modal">
-                    
+                    <ProjectModal id={id} title={title} subtitle={title}  image={image} description={description} tech={tech} url={url} dates={dates} />
                 </div> */}
-                    {/* <ProjectModal title={title} subtitle={title}  image={image} description={description} tech={tech} url={url} dates={dates} /> */}
-                {/* </div> */}
             </div>
         </div>
         </Styles>
