@@ -57,7 +57,7 @@ async function createBlogPage (graphql, actions, reporter) {
     path = `/blog`
     createPage({
         path,
-        component: require.resolve('./src/pages/blog.js'),
+        component: require.resolve('./src/pages/blog.js')
     })
   }
 

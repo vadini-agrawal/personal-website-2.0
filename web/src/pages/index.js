@@ -2,21 +2,22 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Header from "../components/header"
+import Footer from "../components/footer"
 import Styled from 'styled-components';
-import Headshot from '../images/VadiniAgrawalPicture.jpg';
 import Projects from "../components/projects";
-import Header from "../components/Header";
-import Footer from "../components/footer";
-import Blog from "./blog.js";
-import MyLogo from '../images/mylogo.png';
+import Resume from '../static/VadiniAgrawalResume.pdf';
 // import '../styles/global.css';
 
 
 const Styles = Styled.section`
   font-family: 'Josefin Sans', sans-serif;
-
+  position: absolute;
+  max-width: 100%;
+  .anti {
+    position: relative;
+    padding: none;
+  }
   .block {
     display: flex;
     height: 100vh;
@@ -27,12 +28,15 @@ const Styles = Styled.section`
     display: -moz-flex;
     display: -webkit-flex;
   }
+  .inside {
+    margin: auto;
+  }
   .block-2 {
     background-color: #f9a743;
     display: flex;
+    width: 100%;
     height: auto;
     padding: 15vh;
-    width: 100vw;
     margin-bottom: 4vh;
     display: -moz-box;
     display: -ms-flexbox;
@@ -42,9 +46,9 @@ const Styles = Styled.section`
     padding-left: 20vw;
 
   }
-  .inside {
-    margin: auto;
-  }
+  // .inside {
+  //   margin: auto;
+  // }
   .btn {
     border-radius: 0; 
   }
@@ -67,15 +71,26 @@ const Styles = Styled.section`
       background-color: #f9a743;
       color: #fff; }
   .big-header {
+    word-wrap: normal;
       font-size: 100px;
+      margin-top: 10vh;
   }
-  .header {
+  @media only screen and (max-width: 700px) {
+    .big-header {
+      font-size: 10vw;
+      margin-right: 15px;
+    }
+  }
+  h3 {
+    word-wrap: normal;
+  }
+  .header-2 {
     padding: 5vh;
   }
   #projects {
     height: auto;
     display: flex;
-    padding: 15vh;
+    padding-left: 12vw;
   }
   a {
     text-decoration: none;
@@ -85,14 +100,16 @@ const Styles = Styled.section`
 
 const IndexPage = () => (
     // <SEO title="Home" />
-    <Layout>
     <Styles>
+    <div className="anti">
+      <Header />
+    </div>
     <div className="block" >
       <div className="inside">
-        <div className="header">
+        <div className="header-2">
           <h1 className="big-header"> Hi! 🎊 <br/> I'm Vadini Agrawal.</h1>
           <h3>I'm a product-oriented, purpose-driven computer science student. </h3>
-          <a className="btn btn-main" href="#" target="_blank" role="button" download="">Download my resume!</a>
+          <a className="btn btn-main" href={Resume} role="button" download>Download my resume!</a>
         </div>
       </div>
 	  </div>
@@ -113,16 +130,10 @@ const IndexPage = () => (
       </div>
     </div>
     <div id="projects" className="block">
-      <div className="inside">
         <Projects />
-      </div>
     </div>
-    <div className="footer">
-      
-    </div>
-    {/* <Footer /> */}
+    <Footer />
     </Styles>
-    </Layout>
 )
 
 export default IndexPage

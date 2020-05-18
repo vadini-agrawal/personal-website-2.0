@@ -20,14 +20,21 @@ const Styles = Styled.section`
   .links {
     float: right;
     padding-top: 10px;
+  
   }
+
   .link {
     color: black;
     text-decoration: none;
     margin-right: 25px;
     font-size: 15px;
     font-family: 'Josefin Sans', sans-serif;
-
+  }
+  @media only screen and (max-width: 600px) {
+    .link {
+      font-size: 12px;
+      margin-right: 15px;
+    }
   }
   .link:hover {
     color: #f9a743;

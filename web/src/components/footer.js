@@ -17,6 +17,8 @@ const Styles = Styled.section`
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
     padding-bottom: 3vh;
+    height: 400px;
+    position: relative;
   }
   .inside {
       margin: auto;
@@ -48,6 +50,12 @@ const Styles = Styled.section`
     margin: 15px;
     margin-top: 30px;
     margin-bottom: 30px;
+  }
+  @media only screen and (max-width: 600px) {
+    .icons img {
+      height: 25px;
+      width: 25px;
+    }
   }
   a {
     text-decoration: none;

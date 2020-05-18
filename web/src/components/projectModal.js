@@ -4,6 +4,7 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 import Styled from 'styled-components'
 import Layout from './layout.js'
 import BlockContent from './block-content'
+import LinkIcon from '../images/link-icon.svg'
 // import ProjectModal from '../projectModal.js'
 
 const Styles = Styled.section`
@@ -49,6 +50,10 @@ font-family: 'Josefin Sans', sans-serif;
     a:hover {
         color: orange;
     }
+    a:hover svg {
+        fill: orange;
+        color: orange;
+    }
     .pill {
         background-color: #fd664d;
         font-size: 15px;
@@ -66,6 +71,15 @@ font-family: 'Josefin Sans', sans-serif;
     .back {
         margin-bottom: 50px;
     }
+    .small {
+        display: inline-block;
+    }
+    .small img {
+        height: 15px;
+        width: 15px;
+        display: inline;
+        margin: 0;
+    }
 `;
 
 
@@ -74,10 +88,7 @@ const ProjectModal = (props) => {
     const { _rawBody, id, title, subtitle, dates, description, tech, url, mainImage, _rawLongDescription } = props;
     const image = mainImage.asset.fluid.src;
     const tech_array = tech.split(',');
-    const handleClose = () => {
-        // this.setState({ open: true });
-        document.getElementById("modal").style.opacity = 0;
-    };
+
     // const handleClose = () => {
     //     setState({ open: true });
     //     document.getElementById('#modal').style.display = none;
@@ -93,7 +104,10 @@ const ProjectModal = (props) => {
                 <div className="title">
                     <span className="large"> { title } </span> <br/>
                     {/* <span className="medium"> { subtitle } </span> <br/><br/> */}
-                    <span className="small"><a href={ url } target="_blank"> {url} </a></span> 
+                    <span className="small">
+                       
+                        <a href={ url } target="_blank"> <img src={LinkIcon} alt="link" /> {url} </a>
+                    </span> 
                     <span className="small"> { dates } </span>  <br /> 
                     <div className="description"> { <BlockContent blocks={_rawLongDescription} /> } </div>
                 </div>
@@ -101,7 +115,7 @@ const ProjectModal = (props) => {
                    { tech_array.map(item => <span className="pill">{ item }</span>) }
                 </div>
                 <div className="back">
-                    <a href="/#projects">Back</a>
+                    <a href="/">Back</a>
                 </div>
             </div>
         </div>

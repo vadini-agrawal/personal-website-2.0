@@ -4,11 +4,14 @@ html {
   font-family: 'Josefin Sans', sans-serif !important;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  width: 100vw;
+  position: absolute;
 }
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 article,
 aside,

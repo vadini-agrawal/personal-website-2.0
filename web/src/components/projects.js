@@ -11,7 +11,6 @@ const Styles = Styled.section`
     .container {
         display: flex;
         flex-flow: row wrap;
-        width: 65vw;
         text-align: center;
     }
 `;
