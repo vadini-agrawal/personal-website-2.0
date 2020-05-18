@@ -5,6 +5,7 @@ import Styled from 'styled-components'
 import ProjectModal from './projectModal'
 
 const Styles = Styled.section`
+    // display: inline-block;
     .card {
         height: 300px;
         width: 250px;

@@ -3,6 +3,7 @@ import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import Styled from 'styled-components'
 import Layout from './layout.js'
+import SEO from './seo.js'
 import BlockContent from './block-content'
 import LinkIcon from '../images/link-icon.svg'
 // import ProjectModal from '../projectModal.js'
@@ -96,6 +97,7 @@ const ProjectModal = (props) => {
     return (
         <Layout>
         <Styles>
+        <SEO title="Projects" />
         <div id="modal" className="modal">
             <div className="inside">
                 <div className="image">

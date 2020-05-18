@@ -7,11 +7,14 @@ import { graphql, useStaticQuery } from "gatsby"
 import ProjectModal from './projectModal.js'
 
 
-const Styles = Styled.section`
+const Styles = Styled.div`
     .container {
         display: flex;
-        flex-flow: row wrap;
-        text-align: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: auto;
+        margin-top: 4vh;
+        margin-bottom: 4vh;
     }
 `;
 

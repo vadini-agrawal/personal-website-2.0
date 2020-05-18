@@ -15,7 +15,7 @@ font-family: 'Josefin Sans', sans-serif;
     height: 63vh;
   }
   .body {
-    padding-top: 10vh;
+    padding-top: 15vh;
     padding-left: 10vw;
     padding-right: 10vw;
   }

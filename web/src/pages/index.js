@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import Styled from 'styled-components';
@@ -87,11 +88,14 @@ const Styles = Styled.section`
   .header-2 {
     padding: 5vh;
   }
-  #projects {
-    height: auto;
-    display: flex;
-    padding-left: 12vw;
-  }
+  // .test {
+  //   text-align: center;
+  // }
+  // #projects {
+  //   height: auto;
+  //   width: 100%;
+  //   display: inline-block;
+  // }
   a {
     text-decoration: none;
     color: black;
@@ -101,6 +105,7 @@ const Styles = Styled.section`
 const IndexPage = () => (
     // <SEO title="Home" />
     <Styles>
+    <SEO title="Home" description="Personal website of Vadini Agrawal built in Gatsby and Sanity" />
     <div className="anti">
       <Header />
     </div>
@@ -129,9 +134,9 @@ const IndexPage = () => (
           </p>
       </div>
     </div>
-    <div id="projects" className="block">
-        <Projects />
-    </div>
+      <div id="projects">
+          <Projects />
+      </div>
     <Footer />
     </Styles>
 )
