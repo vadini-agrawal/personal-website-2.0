@@ -29,11 +29,11 @@ const Projects = (props) => {
                     dates
                     description
                     mainImage {
-                    asset {
-                        fluid {
-                        src
+                        asset {
+                            fluid {
+                                src
+                            }
                         }
-                    }
                     }
                     subtitle
                     title

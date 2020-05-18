@@ -3,6 +3,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Styled from 'styled-components'
 import ProjectModal from './projectModal'
+import { buildImageObj } from '../lib/helpers'
+import { imageUrlFor } from '../lib/image-url'
 
 const Styles = Styled.section`
     // display: inline-block;
