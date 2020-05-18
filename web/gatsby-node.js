@@ -10,7 +10,7 @@ const { format } = require('date-fns')
 async function createBlogPostPages (graphql, actions, reporter) {
     const { createPage } = actions
     const result = await graphql(`
-      {
+      query {
         allSanityBlogPost {
             edges {
               node {
@@ -64,7 +64,7 @@ async function createBlogPage (graphql, actions, reporter) {
 async function createProjectPages (graphql, actions, reporter) {
   const { createPage } = actions
   const result = await graphql(`
-    {
+    query {
         allSanityProject {
             edges {
             node {
