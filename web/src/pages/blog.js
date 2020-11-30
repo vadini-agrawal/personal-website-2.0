@@ -59,7 +59,7 @@ const BlogPage = props => {
   return (
     <Styles>
     <Layout>
-      <SEO title='Blog' />
+      <SEO title='Writing' />
       <div className="general">
       <div className="body">
         <p className="header">Articles</p>
