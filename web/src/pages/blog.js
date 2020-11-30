@@ -9,7 +9,7 @@ import Styled from 'styled-components'
 import { responsiveTitle1 } from '../components/typography.module.css'
 
 const Styles = Styled.section`
-font-family: 'Josefin Sans', sans-serif;
+font-family: 'Zilla Slab', serif;
 
   .general {
     height: 63vh;
@@ -59,7 +59,7 @@ const BlogPage = props => {
   return (
     <Styles>
     <Layout>
-      <SEO title='Blog' />
+      <SEO title='Writing' />
       <div className="general">
       <div className="body">
         <p className="header">Articles</p>

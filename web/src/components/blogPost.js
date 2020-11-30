@@ -6,12 +6,12 @@ import BlockContent from './block-content'
 import "./layout.css"
 
 const Styles = Styled.section`
-font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Zilla Slab', serif !important;
 
     padding-right: 20vw;
     padding-left: 20vw;
     .block-head {
-        display: flex;
+        display: flex;s
         margin-top: 15vh;
     }
     .inside {

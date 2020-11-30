@@ -7,7 +7,7 @@ import Styled from 'styled-components';
 import "./layout.css";
 
 const Styles = Styled.section`
-font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Zilla Slab', serif;
 
   ul {
     list-style: none;

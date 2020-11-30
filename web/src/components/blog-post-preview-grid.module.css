@@ -2,6 +2,7 @@
 @import '../styles/vars.css';
 
 .root {
+  font-family: 'Zilla Slab', serif;
   margin: 2em 0 4em;
 }
 

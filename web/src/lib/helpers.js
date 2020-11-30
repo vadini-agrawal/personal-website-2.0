@@ -14,7 +14,7 @@ export function filterOutDocsWithoutSlugs ({ slug }) {
 }
 
 export function getBlogUrl (linkStub) {
-  return `/blog/${linkStub}`
+  return `/writing/${linkStub}`
 }
 
 export function buildImageObj (source) {

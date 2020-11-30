@@ -3,22 +3,15 @@ import PropTypes from "prop-types"
 import React from "react"
 import Styled from 'styled-components';
 import MyLogo from '../images/mylogo.png';
-import Twitter from '../images/twitter.svg';
+import Twitter from '../images/twitter.jpeg';
 import Medium from '../images/medium.svg';
-import LinkedIn from '../images/linkedin.svg';
-import Github from '../images/github.svg';
-import Email from '../images/email.svg';
+import LinkedIn from '../images/linkedin.png';
+import Github from '../images/github.png';
+import Email from '../images/email.png';
 
-const Styles = Styled.section`
+const Styles = Styled.div`
   .footer {
-    background-color: #f4f4f4;
-    display: flex;
-    padding-top: 5vh;
     text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
-    padding-bottom: 3vh;
-    height: 400px;
-    position: relative;
   }
   .inside {
       margin: auto;
@@ -30,7 +23,6 @@ const Styles = Styled.section`
     margin-left: 10px;
 
     font-size: 15px;
-    font-family: 'Josefin Sans', sans-serif;
   }
   .link:hover {
     color: #f9a743;
@@ -50,6 +42,7 @@ const Styles = Styled.section`
     margin: 15px;
     margin-top: 30px;
     margin-bottom: 30px;
+    transition: 0.5s ease;
   }
   @media only screen and (max-width: 600px) {
     .icons img {
@@ -61,30 +54,21 @@ const Styles = Styled.section`
     text-decoration: none;
     color: black;
   }
+  .icons img:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 0.5s ease;
+  }
 `;
 
 
 const Footer = () => (
     <Styles>
-        <div className="footer">
-            <div className="inside">
-            <Link to="/"
-                className="link-logo">
-            <img className="logo_img" alt="my logo" src={MyLogo} />
-            </Link>  
-            <br /> <br /> 
-          <Link className="link" to="/">
-             HOME
-          </Link>
-          <Link className="link" to="#projects">
-             PROJECTS
-          </Link>
-          <Link className="link" to="/blog">
-             BLOG
-            </Link>
+         <div className="footer">
           <div className="icons">
-              <a href="http://www.linkedin.com/in/vadini-agrawal" target="_blank">
-                <img  src={LinkedIn} /> 
+              <a href="https://twitter.com/@a_vadini" target="_blank">
+                  <img  src={Twitter} /> 
               </a>
               <a href="http://www.github.com/vadini-agrawal" target="_blank">
                   <img  src={Github} /> 
@@ -92,11 +76,8 @@ const Footer = () => (
               <a href="mailto:vadini@gatech.edu" target="_blank">
                   <img  src={Email} /> 
               </a>
-              <a href="https://twitter.com/@a_vadini" target="_blank">
-                  <img  src={Twitter} /> 
-              </a>
-              <a  href="http://medium.com/@vadini/" target="_blank" style={{'border-radius': '4px'}}>
-                  <img  src={Medium} /> 
+              <a href="http://www.linkedin.com/in/vadini-agrawal" target="_blank">
+                <img  src={LinkedIn} /> 
               </a>
           </div>
           <p>
@@ -105,12 +86,7 @@ const Footer = () => (
             <Link to="https://www.gatsbyjs.org">Gatsby</Link> & <Link to="https://www.sanity.io">Sanity</Link>
           </p>
           </div>
-     </div>
     </Styles>
 )
 
-export default Footer
-
-  {/* <div class="copyright-text"> 
-
-  </div> */}
+export default Footer;

@@ -1,13 +1,13 @@
 @import '../styles/media-queries.css';
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Jost&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Jost&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap');
 html {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Zilla Slab', serif;
 }
 
 :root {
   --base-unit: 17;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Zilla Slab', serif;
 
   /* Font sizes */
   --font-micro-size: calc(8 / var(--base-unit) * 1rem);
@@ -35,42 +35,42 @@ html {
 .title1 {
   font-size: var(--font-title1-size);
   line-height: var(--font-title1-line-height);
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Zilla Slab', serif;
 
 }
 
 .title2 {
   font-size: var(--font-title2-size);
   line-height: var(--font-title2-line-height);
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Zilla Slab', serif;
 
 }
 
 .title3 {
   font-size: var(--font-title3-size);
   line-height: var(--font-title3-line-height);
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Zilla Slab', serif;
 
 }
 
 .large {
   font-size: var(--font-large-size);
   line-height: var(--font-large-line-height);
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Zilla Slab', serif;
 
 }
 
 .base {
   font-size: inherit;
   line-height: inherit;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Zilla Slab', serif;
 
 }
 
 .small {
   font-size: var(--font-small-size);
   line-height: var(--font-small-line-height);
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Zilla Slab', serif;
 
 }
 
@@ -78,7 +78,7 @@ html {
   font-size: var(--font-micro-size);
   line-height: var(--font-micro-line-height);
   text-transform: uppercase;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Zilla Slab', serif;
 
 }
 
@@ -93,6 +93,7 @@ html {
   line-height: 30px;
   margin: 0.5rem 0 1rem 0;
   font-family:  sans-serif;
+  font-family: 'Zilla Slab', serif;
 
 
   @media (--media-min-small) {
@@ -108,7 +109,7 @@ html {
 
 .blockQuote {
   background: #eee;
-  font-family:  sans-serif;
+  font-family: 'Zilla Slab', serif;
   padding: 40px;
   font-size: 18px;
   line-height: 30px;
@@ -119,7 +120,7 @@ html {
   font-size: var(--font-title3-size);
   line-height: var(--font-title3-line-height);
   margin: 1rem 0 2rem;
-  font-family:  sans-serif;
+  font-family: 'Zilla Slab', serif;
 
 
   @media (--media-min-small) {
@@ -138,7 +139,7 @@ html {
   font-size: var(--font-large-size);
   line-height: var(--font-large-line-height);
   margin: 1.5rem 0 0.5rem;
-  font-family:  sans-serif;
+  font-family: 'Zilla Slab', serif;
 
 
   @media (--media-min-small) {
@@ -157,7 +158,7 @@ html {
   font-size: var(--font-large-size);
   line-height: var(--font-large-line-height);
   margin: 1rem 0 0.5rem;
-  font-family:  sans-serif;
+  font-family: 'Zilla Slab', serif;
 
 
   @media (--media-min-small) {
@@ -175,7 +176,7 @@ html {
   font-size: var(--font-base-size);
   line-height: var(--font-base-line-height);
   margin: 1rem 0 0.5rem;
-  font-family:  sans-serif;
+  font-family: 'Zilla Slab', serif;
 
 
   @media (--media-min-small) {

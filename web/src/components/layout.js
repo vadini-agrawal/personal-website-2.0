@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
 
   return (
       <div>
-        <Header siteTitle="Vadini Agrawal" />
+        <Header siteTitle="Hi! I'm Vadini" />
         <main>{children}</main>
         <Footer />
       </div>

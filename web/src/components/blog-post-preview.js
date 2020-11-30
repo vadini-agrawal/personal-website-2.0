@@ -9,7 +9,7 @@ import "./layout.css"
 
 const Styles = Styled.section`
   color: black;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Zilla Slab', serif;
   a {
     color: black;
   }
@@ -21,7 +21,7 @@ const Styles = Styled.section`
   }
   .title {
     font-size: 28px;
-    color: #f9a743;
+    color: #104d6c;
   }
   .subtitle {
     font-size: 15px;

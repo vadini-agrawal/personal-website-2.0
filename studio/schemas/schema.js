@@ -6,7 +6,9 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import figure from './figure'
 import blockContent from './blockContent'
 import blogPost from './blogPost'
-import project from './project'
+import currentlyBuilding from './currentlyBuilding'
+import currentlyCurious from './currentlyCurious'
+import currentlyExploring from './currentlyExploring'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -20,6 +22,8 @@ export default createSchema({
     figure,
     blockContent,
     blogPost,
-    project
+    currentlyBuilding,
+    currentlyCurious,
+    currentlyExploring
   ])
 })
