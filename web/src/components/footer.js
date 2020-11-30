@@ -2,9 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import Styled from 'styled-components';
-import MyLogo from '../images/mylogo.png';
 import Twitter from '../images/twitter.jpeg';
-import Medium from '../images/medium.svg';
 import LinkedIn from '../images/linkedin.png';
 import Github from '../images/github.png';
 import Email from '../images/email.png';

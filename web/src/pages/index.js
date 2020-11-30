@@ -1,21 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import Styled from 'styled-components';
 // import Projects from "../components/projects";
 import Ocean from "../images/oceanblue.jpeg";
-import Resume from '../static/VadiniAgrawalResume.pdf';
 // import '../styles/global.css';
-import MyLogo from '../images/mylogo.png';
-import Twitter from '../images/twitter.svg';
-import Medium from '../images/medium.svg';
-import LinkedIn from '../images/linkedin.svg';
-import Github from '../images/github.svg';
-import Email from '../images/email.svg';
 import CurrentlyCurious from '../components/currentlyCurious';
 import CurrentlyExploring from '../components/currentlyExploring';
 import CurrentlyBuilding from "../components/currentlyBuilding"
