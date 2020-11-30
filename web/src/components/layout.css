@@ -9,6 +9,7 @@ html {
   width: 100vw;
 }
 body {
+  font-family: 'Zilla Slab', serif;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -27,6 +28,8 @@ nav,
 section,
 summary {
   display: block;
+  font-family: 'Zilla Slab', serif;
+
 }
 audio,
 canvas,
@@ -191,7 +194,7 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
+  font-family: 'Zilla Slab', serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -206,7 +209,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: 'Zilla Slab', serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;

@@ -9,7 +9,7 @@ const Styles = Styled.section`
     marginBottom: 1.45rem;
     height: 70px;
     padding: 15px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Zilla Slab', serif;
     padding-right: 10%;
     padding-left: 10%;
     position: fixed;
@@ -22,13 +22,12 @@ const Styles = Styled.section`
     padding-top: 10px;
   
   }
-
   .link {
     color: black;
     text-decoration: none;
     margin-right: 25px;
     font-size: 15px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Zilla Slab', serif;
   }
   @media only screen and (max-width: 600px) {
     .link {
@@ -37,7 +36,7 @@ const Styles = Styled.section`
     }
   }
   .link:hover {
-    color: #f9a743;
+    color: #104d6c;
   }
   .header .link {
     float: left;

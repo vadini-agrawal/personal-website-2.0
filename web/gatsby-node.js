@@ -61,59 +61,8 @@ async function createBlogPage (graphql, actions, reporter) {
     })
   }
 
-async function createProjectPages (graphql, actions, reporter) {
-  const { createPage } = actions
-  const result = await graphql(`
-    query {
-        allSanityProject {
-            edges {
-            node {
-                id
-                dates
-                description
-                mainImage {
-                asset {
-                  fluid {
-                    src
-                    }
-                  }
-                }
-                subtitle
-                title
-                tech
-                url
-                _rawLongDescription
-            }
-            }
-        }
-    }
-  `)
-
-  if (result.errors) throw result.errors
-
-  const postEdges = (result.data.allSanityProject || {}).edges || []
-
-  postEdges.forEach((edge, index) => {
-    const { id, title } = edge.node
-    const string = 'project-';
-    const title_s =  title.replace(/ /g, "-");
-    const title_stub = string.concat(title_s);
-  //   const dateSegment = format(_createdAt, 'YYYY-MM')
-    const path = `/${title_stub}`
-    reporter.info(`Creating project page: ${path}`)
-
-    createPage({
-      path,
-      component: require.resolve('./src/template/project-modal.js'),
-      context: { id }
-    })
-  })
-}
-
-
 exports.createPages = async ({ graphql, actions, reporter }) => {
     // await createBlogPostPages(graphql, actions, reporter)
     await createBlogPostPages(graphql, actions, reporter)
     await createBlogPage(graphql, actions, reporter)
-    await createProjectPages(graphql, actions, reporter)
 }
