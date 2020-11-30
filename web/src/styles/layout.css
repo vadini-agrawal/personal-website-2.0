@@ -1,8 +1,10 @@
 @import './vars.css';
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Jost&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Jost&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap');
 
 html {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Zilla Slab', serif;
   font-size: var(--font-base-size);
   line-height: var(--font-base-line-height);
 }

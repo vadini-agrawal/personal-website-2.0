@@ -40,7 +40,7 @@ async function createBlogPostPages (graphql, actions, reporter) {
     postEdges.forEach((edge, index) => {
       const { id, linkStub } = edge.node
     //   const dateSegment = format(_createdAt, 'YYYY-MM')
-      const path = `/blog/${linkStub}`
+      const path = `/writing/${linkStub}`
       console.log(id)
       reporter.info(`Creating blog post page: ${path}`)
   
@@ -54,7 +54,7 @@ async function createBlogPostPages (graphql, actions, reporter) {
 
 async function createBlogPage (graphql, actions, reporter) {
     const { createPage } = actions
-    path = `/blog`
+    path = `/writing`
     createPage({
         path,
         component: require.resolve('./src/pages/blog.js')

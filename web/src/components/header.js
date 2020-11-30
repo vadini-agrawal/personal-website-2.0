@@ -67,16 +67,10 @@ const Header = ({ siteTitle }) => (
           HOME
         </Link>
         <Link
-          to="#projects"
+          to="/writing"
           className="link"
         >
-          PROJECTS
-        </Link>
-        <Link
-          to="/blog"
-          className="link"
-        >
-          BLOG
+          WRITING
         </Link>
       </div>
   </div>
