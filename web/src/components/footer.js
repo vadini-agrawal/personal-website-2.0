@@ -6,7 +6,6 @@ import Twitter from '../images/twitter.jpeg';
 import LinkedIn from '../images/linkedin.png';
 import Github from '../images/github.png';
 import Email from '../images/email.png';
-import { OutboundLink } from "gatsby-plugin-google-gtag";
 
 const Styles = Styled.div`
   .footer {
@@ -66,18 +65,18 @@ const Footer = () => (
     <Styles>
          <div className="footer">
           <div className="icons">
-              <OutboundLink href="https://twitter.com/a_vadini" target="_blank">
+              <a href="https://twitter.com/@a_vadini" target="_blank">
                   <img  src={Twitter} /> 
-              </OutboundLink>
-              <OutboundLink href="http://www.github.com/vadini-agrawal" target="_blank">
+              </a>
+              <a href="http://www.github.com/vadini-agrawal" target="_blank">
                   <img  src={Github} /> 
-              </OutboundLink>
-              <OutboundLink href="mailto:vadini101@gmail.com" target="_blank">
+              </a>
+              <a href="mailto:vadini@gatech.edu" target="_blank">
                   <img  src={Email} /> 
-              </OutboundLink>
-              <OutboundLink href="http://www.linkedin.com/in/vadini-agrawal" target="_blank">
+              </a>
+              <a href="http://www.linkedin.com/in/vadini-agrawal" target="_blank">
                 <img  src={LinkedIn} /> 
-              </OutboundLink>
+              </a>
           </div>
           <p>
             © {new Date().getFullYear()}, Built with

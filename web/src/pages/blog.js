@@ -67,7 +67,6 @@ const BlogPage = props => {
       <div className="previews">
       {postNodes && postNodes.length > 0 && <BlogPostPreviewGrid nodes={postNodes} />}
       </div>
-     <p>More to come!</p> 
       </div>
     </Layout>
     </Styles>

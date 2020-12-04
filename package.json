@@ -3,7 +3,6 @@
     "@sanity/cli": "^1.149.9",
     "bootstrap": "^4.4.1",
     "gatsby-cli": "^2.12.15",
-    "gatsby-plugin-google-gtag": "^2.4.0",
     "react-dom": "^16.13.1",
     "react-transition-group": "^1.2.1"
   }
