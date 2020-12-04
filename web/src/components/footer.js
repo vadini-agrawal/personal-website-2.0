@@ -26,16 +26,16 @@ const Styles = Styled.div`
     color: #f9a743;
   }
   .logo_img {
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     margin: auto;
   }
   p {
       font-size: 15px;
   }
   .icons img {
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     display: inline-block;
     margin: 15px;
     margin-top: 30px;
@@ -71,7 +71,7 @@ const Footer = () => (
               <a href="http://www.github.com/vadini-agrawal" target="_blank">
                   <img  src={Github} /> 
               </a>
-              <a href="mailto:vadini101@gmail.com" target="_blank">
+              <a href="mailto:vadini@gatech.edu" target="_blank">
                   <img  src={Email} /> 
               </a>
               <a href="http://www.linkedin.com/in/vadini-agrawal" target="_blank">
