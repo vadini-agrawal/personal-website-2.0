@@ -49,6 +49,11 @@ module.exports = {
         // token: process.env.skkgqmyyatwOhjCYJYTdyxraevdL4TcqQMA5dBi9g9xrmu3qgJXHvMRnBKCw4YNPvZ90cDDGIJ5mxhuD6fowQc6cWQjdEhmhusEv80WwrCc6QKgwAVY0xM3l1xR1NMqx18mepfsNSCLMlzZKKaKh8l33PxedjFJnlYyjJYT7H9AwMOaCjjGp,
     },
   },
-
+  {
+    resolve: `gatsby-plugin-google-analytics`,
+    options: {
+       trackingId: process.env.GOOGLE_ANALYTICS_TRACKING,
+    },
+  },
   ],
 }
