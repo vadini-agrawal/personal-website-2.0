@@ -49,6 +49,15 @@ module.exports = {
         // token: process.env.skkgqmyyatwOhjCYJYTdyxraevdL4TcqQMA5dBi9g9xrmu3qgJXHvMRnBKCw4YNPvZ90cDDGIJ5mxhuD6fowQc6cWQjdEhmhusEv80WwrCc6QKgwAVY0xM3l1xR1NMqx18mepfsNSCLMlzZKKaKh8l33PxedjFJnlYyjJYT7H9AwMOaCjjGp,
     },
   },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "G-VKXQ1SX53V", // Google Analytics / GA
+        ]
+      }
+    }
 
   ],
 }
