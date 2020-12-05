@@ -6,8 +6,6 @@ import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Styled from 'styled-components'
 
-import { responsiveTitle1 } from '../components/typography.module.css'
-
 const Styles = Styled.section`
 font-family: 'Zilla Slab', serif;
 
@@ -67,6 +65,7 @@ const BlogPage = props => {
       <div className="previews">
       {postNodes && postNodes.length > 0 && <BlogPostPreviewGrid nodes={postNodes} />}
       </div>
+      <p>More to come!</p>
       </div>
     </Layout>
     </Styles>

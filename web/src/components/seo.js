@@ -6,83 +6,81 @@
  */
 
 import React from "react"
-import PropTypes from "prop-types"
+// import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+// import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  )
+function SEO() {
+  // const { site } = useStaticQuery(
+  //   graphql`
+  //     query {
+  //       site {
+  //         siteMetadata {
+  //           title
+  //           description
+  //           author
+  //         }
+  //       }
+  //     }
+  //   `
+  // )
 
-  const metaDescription = description || site.siteMetadata.description
+  // const metaDescription = description || site.siteMetadata.description
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    />
+    <Helmet>
+      <title>Home | Vadini Agrawal</title>
+      <meta name="title" content="Home | Vadini Agrawal"/>
+      <meta name="description" content="Vadini's landing page 🎊"/>
+
+      <meta property="og:type" content="website"/>
+      <meta property="og:url" content="https://vadiniagrawal.com/"/>
+      <meta property="og:title" content="Home | Vadini Agrawal"/>
+      <meta property="og:description" content="Vadini's landing page 🎊"/>
+      <meta property="og:image" content="https://www.vadiniagrawal.com/mylogo.png"/>
+
+      <meta property="twitter:card" content="summary_large_image"/>
+      <meta property="twitter:url" content="https://vadiniagrawal.com/"/>
+      <meta property="twitter:title" content="Home | Vadini Agrawal"/>
+      <meta property="twitter:description" content="Vadini's landing page 🎊"/>
+      <meta name="google-site-verification" content="O7EJ9LUAxt7hpqldVaLBv8ypYQ2UmmXAcpKexw-VHyE" />
+      <meta property="twitter:image" content="https://www.vadiniagrawal.com/mylogo.png"></meta>
+      <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+      <link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
+      <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
+      <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
+      <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+      <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
+      <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+      <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+      <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+      <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+      <meta name="application-name" content="&nbsp;"/>
+      <meta name="msapplication-TileColor" content="#FFFFFF" />
+      <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+      <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+      <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+      <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+      <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+    </Helmet>
   )
 }
 
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-}
+// SEO.defaultProps = {
+//   lang: `en`,
+//   meta: [],
+//   description: ``,
+// }
 
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
-}
+// SEO.propTypes = {
+//   description: PropTypes.string,
+//   lang: PropTypes.string,
+//   meta: PropTypes.arrayOf(PropTypes.object),
+//   title: PropTypes.string.isRequired,
+// }
 
 export default SEO

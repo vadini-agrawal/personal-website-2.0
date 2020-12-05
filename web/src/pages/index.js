@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react"
 import { Link } from "gatsby"
 
 import SEO from "../components/seo"
@@ -182,7 +183,7 @@ const Styles = Styled.section`
 const IndexPage = () => (
     // <SEO title="Home" />
     <Styles>
-    <SEO title="Home" description="Personal website of Vadini Agrawal built in Gatsby and Sanity" />
+    <SEO />
     <div className="anti">
       <Header />
     </div>
