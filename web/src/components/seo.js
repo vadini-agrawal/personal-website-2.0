@@ -10,7 +10,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 // import { useStaticQuery, graphql } from "gatsby"
 
-function SEO() {
+function SEO({title}) {
   // const { site } = useStaticQuery(
   //   graphql`
   //     query {
@@ -29,22 +29,23 @@ function SEO() {
 
   return (
     <Helmet>
-      <title>Home | Vadini Agrawal</title>
-      <meta name="title" content="Home | Vadini Agrawal"/>
+      <title>{title}</title>
+      <meta name="title" content="{title}"/>
       <meta name="description" content="Vadini's landing page 🎊"/>
 
       <meta property="og:type" content="website"/>
       <meta property="og:url" content="https://vadiniagrawal.com/"/>
-      <meta property="og:title" content="Home | Vadini Agrawal"/>
+      <meta property="og:title" content={title}/>
       <meta property="og:description" content="Vadini's landing page 🎊"/>
       <meta property="og:image" content="https://www.vadiniagrawal.com/mylogo.png"/>
 
       <meta property="twitter:card" content="summary_large_image"/>
       <meta property="twitter:url" content="https://vadiniagrawal.com/"/>
-      <meta property="twitter:title" content="Home | Vadini Agrawal"/>
+      <meta property="twitter:title" content={title}/>
       <meta property="twitter:description" content="Vadini's landing page 🎊"/>
-      <meta name="google-site-verification" content="O7EJ9LUAxt7hpqldVaLBv8ypYQ2UmmXAcpKexw-VHyE" />
       <meta property="twitter:image" content="https://www.vadiniagrawal.com/mylogo.png"></meta>
+
+      <meta name="google-site-verification" content="O7EJ9LUAxt7hpqldVaLBv8ypYQ2UmmXAcpKexw-VHyE" />
       <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
       <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />

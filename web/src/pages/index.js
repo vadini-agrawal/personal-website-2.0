@@ -36,70 +36,14 @@ const Styles = Styled.section`
   .inside {
     margin: auto;
   }
-  .block-2 {
-    background-color: #f9a743;
-    display: flex;
-    width: 100%;
-    height: auto;
-    padding: 15vh;
-    margin-bottom: 4vh;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -moz-flex;
-    display: -webkit-flex;
-    padding-right: 20vw;
-    padding-left: 20vw;
 
-  }
-  // .inside {
-  //   margin: auto;
-  // }
-  .btn {
-    border-radius: 0; 
-  }
-
-  .btn-main {
-    color: #fff;
-    border-radius: 30px;
-    font-size: 18px;
-    padding: 15px 40px;
-    display: inline-block;
-    background-color: #f9a743;
-    -moz-box-shadow: 0 15px 40px rgba(249, 167, 68, 0.5);
-    -webkit-box-shadow: 0 15px 40px rgba(249, 167, 68, 0.5);
-    box-shadow: 0 15px 40px rgba(249, 167, 68, 0.5);
-    background-image: -moz-linear-gradient(bottom, rgba(255, 239, 206, 0) 0%, rgba(255, 239, 206, 0.25) 100%);
-    background-image: -o-linear-gradient(bottom, rgba(255, 239, 206, 0) 0%, rgba(255, 239, 206, 0.25) 100%);
-    background-image: -webkit-linear-gradient(bottom, rgba(255, 239, 206, 0) 0%, rgba(255, 239, 206, 0.25) 100%);
-    background-image: linear-gradient(bottom, rgba(255, 239, 206, 0) 0%, rgba(255, 239, 206, 0.25) 100%); }
-    .btn-main:hover, .btn-main:focus {
-      background-color: #f9a743;
-      color: #fff; }
-  .big-header {
-    word-wrap: normal;
-      // font-size: 30px;
-      margin-top: 10vh;
-  }
-  @media only screen and (max-width: 700px) {
-    .big-header {
-      font-size: 10vw;
-      margin-right: 15px;
-    }
-  }
   h3 {
     word-wrap: normal;
   }
   .header-2 {
     padding: 5vh;
   }
-  // .test {
-  //   text-align: center;
-  // }
-  // #projects {
-  //   height: auto;
-  //   width: 100%;
-  //   display: inline-block;
-  // }
+
   a {
     text-decoration: none;
     color: black;
@@ -109,6 +53,12 @@ const Styles = Styled.section`
     margin-left: 30vw;
     margin-right: 30vw;
     text-align: left;
+  }
+  @media only screen and (max-width: 700px) {
+    .mainContent {
+      margin-left: 10vw;
+      margin-right: 10vw;
+    }
   }
 
   .callout {
@@ -128,12 +78,7 @@ const Styles = Styled.section`
     padding-left: 30px;
     border-left: 4px solid black;
   }
-  // .headerImage {
-  //   display: inline-block;
-  //   max-height: 250px;
-  //   min-width: 100%;
-  //   // object-fit: cover;
-  // }
+
   .currently {
     font-size: 15px;
     line-height: 20px;
@@ -143,9 +88,6 @@ const Styles = Styled.section`
     line-height: 20px;
   }
 
-  .inside {
-      margin: auto;
-  }
   p {
     font-size: 15px;
   }
@@ -167,23 +109,16 @@ const Styles = Styled.section`
     max-height:250px;
     min-width: 100%;
     object-fit: cover;
-    // background-image: url("../images/oceanblue.jpeg");
-
-    // /* Full height */
-    // height: 100%;
-  
-    // /* Create the parallax scrolling effect */
-    // background-attachment: fixed;
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
+  }
+  h1 {
+    margin-top: 4vh;
   }
 `;
 
 const IndexPage = () => (
     // <SEO title="Home" />
     <Styles>
-    <SEO />
+    <SEO title='Home | Vadini Agrawal' />
     <div className="anti">
       <Header />
     </div>
@@ -193,11 +128,11 @@ const IndexPage = () => (
     <div>
     <div className="block">
       <div className="mainContent">
-          <h1 className="big-header"> <b> Hi! I'm Vadini. </b></h1>
+          <h1> <b> Hi! I'm Vadini. </b></h1>
           <h5 className="callout"> <span className="emoji">🎊 </span> Welcome to my landing page. </h5>
           <h3> I'm an MS in CS at Georgia Tech. </h3> 
           <p className="quote"> Previously SWE intern at Oscar Health & Product fellow with True Ventures</p>
-          <h4> Interested in how tech can make life more fulfilling </h4>
+          <h4> Interested in how to make life more fulfilling </h4>
           <hr></hr>
           { <CurrentlyBuilding /> }
           { <CurrentlyCurious />}
