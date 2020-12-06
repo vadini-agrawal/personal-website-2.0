@@ -5,23 +5,38 @@ import BlogPostPreviewGrid from '../components/blog-post-preview-grid'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Styled from 'styled-components'
+import Header from '../components/header'
+import Footer from '../components/footer'
 
 const Styles = Styled.section`
-font-family: 'Zilla Slab', serif;
+  font-family: 'Zilla Slab', serif;
 
+  .anti {
+    position: relative;
+    padding: none;
+  }
   .general {
-    height: 63vh;
+    height: auto;
   }
   .body {
     padding-top: 15vh;
     padding-left: 10vw;
     padding-right: 10vw;
+    height: auto;
+    margin-bottom: 4vh;
   }
   .previews {
     padding-top: none;
     padding-left: 20vw;
     padding-right: 20vw;
   }
+  @media only screen and (max-width: 700px) {
+    .previews {
+      margin-left: 10vw;
+      margin-right: 10vw;
+    }
+  }
+
   p {
     text-align: center;
   }
@@ -56,18 +71,20 @@ const BlogPage = props => {
   const postNodes = mapEdgesToNodes(query.posts);
   return (
     <Styles>
-    <Layout>
       <SEO title='Writing | Vadini Agrawal' />
+      <div className="anti">
+        <Header />
+      </div>
       <div className="general">
       <div className="body">
         <p className="header">Articles</p>
+        <div className="previews">
+        {postNodes && postNodes.length > 0 && <BlogPostPreviewGrid nodes={postNodes} />}
+        </div>
+        <p>More to come!</p>
       </div>
-      <div className="previews">
-      {postNodes && postNodes.length > 0 && <BlogPostPreviewGrid nodes={postNodes} />}
+      <Footer />
       </div>
-      <p>More to come!</p>
-      </div>
-    </Layout>
     </Styles>
   )
 }

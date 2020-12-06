@@ -6,10 +6,13 @@ import Twitter from '../images/twitter.jpeg';
 import LinkedIn from '../images/linkedin.png';
 import Github from '../images/github.png';
 import Email from '../images/email.png';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 
 const Styles = Styled.div`
   .footer {
+    background-color: white;
     text-align: center;
+    margin: auto;
   }
   .inside {
       margin: auto;
@@ -47,6 +50,10 @@ const Styles = Styled.div`
       height: 25px;
       width: 25px;
     }
+    // .footer {
+    //   margin-left: 10vw;
+    //   margin-right: 10vw;
+    // }
   }
   a {
     text-decoration: none;
@@ -65,18 +72,18 @@ const Footer = () => (
     <Styles>
          <div className="footer">
           <div className="icons">
-              <a href="https://twitter.com/@a_vadini" target="_blank">
+              <OutboundLink href="https://twitter.com/@a_vadini" target="_blank">
                   <img  src={Twitter} /> 
-              </a>
-              <a href="http://www.github.com/vadini-agrawal" target="_blank">
+              </OutboundLink>
+              <OutboundLink href="http://www.github.com/vadini-agrawal" target="_blank">
                   <img  src={Github} /> 
-              </a>
-              <a href="mailto:vadini@gatech.edu" target="_blank">
+              </OutboundLink>
+              <OutboundLink href="mailto:vadini101@gmail.com" target="_blank">
                   <img  src={Email} /> 
-              </a>
-              <a href="http://www.linkedin.com/in/vadini-agrawal" target="_blank">
+              </OutboundLink>
+              <OutboundLink href="http://www.linkedin.com/in/vadini-agrawal" target="_blank">
                 <img  src={LinkedIn} /> 
-              </a>
+              </OutboundLink>
           </div>
           <p>
             © {new Date().getFullYear()}, Built with
