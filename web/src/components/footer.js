@@ -88,7 +88,7 @@ const Footer = () => (
           <p>
             © {new Date().getFullYear()}, Built with
             {` `}
-            <Link to="https://www.gatsbyjs.org">Gatsby</Link> & <Link to="https://www.sanity.io">Sanity</Link>
+            <OutboundLink to="https://www.gatsbyjs.com/">Gatsby</OutboundLink> & <OutboundLink to="https://www.sanity.io">Sanity</OutboundLink>
           </p>
           </div>
     </Styles>
