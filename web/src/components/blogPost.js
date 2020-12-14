@@ -52,6 +52,7 @@ const Styles = Styled.section`
 
 const BlogPost = (props) => {
     const { _rawBody, title, subtitle, mainImage, publishedAt, linkStub } = props;
+
     const m = moment(publishedAt).format('MMMM Do, YYYY');
 
     console.log(_rawBody);

@@ -57,7 +57,7 @@ const Subscribe = () => (
     <p className="subscribe">Subscribe for updates!</p>
     <form style={{marginBottom: "0px", padding:"3px", textAlign:"center"}} action="https://tinyletter.com/vadini-agrawal" method="post" target="popupwindow" onSubmit="window.open('https://tinyletter.com/vadini-agrawal', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
     >
-  <label className="label" for="tlemail">Email address</label><input className="input-box" type="text" name="email" id="tlemail" />
+  <label className="label" for="tlemail">Your email</label><input className="input-box" type="text" name="email" id="tlemail" />
     <input type="hidden" value="1" name="embed"/><input className="submitButton" type="submit" value="Subscribe" /><p style={{marginBottom: "0px"}}>
         <a className="powered" href="https://tinyletter.com" target="_blank">powered by TinyLetter</a></p>
     </form>
