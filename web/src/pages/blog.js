@@ -3,11 +3,10 @@ import { graphql, useStaticQuery} from 'gatsby'
 import { mapEdgesToNodes } from '../lib/helpers'
 import BlogPostPreviewGrid from '../components/blog-post-preview-grid'
 import SEO from '../components/seo'
-import Subscribe from '../components/subscribe'
-import Layout from '../components/layout'
 import Styled from 'styled-components'
 import Header from '../components/header'
 import Footer from '../components/footer'
+import Ocean from "../images/oceanblue.jpeg";
 
 const Styles = Styled.section`
   font-family: 'Zilla Slab', serif;
@@ -20,7 +19,7 @@ const Styles = Styled.section`
     height: auto;
   }
   .body {
-    padding-top: 15vh;
+    padding-top: 5vh;
     padding-left: 10vw;
     padding-right: 10vw;
     height: auto;
@@ -28,13 +27,13 @@ const Styles = Styled.section`
   }
   .previews {
     padding-top: none;
-    padding-left: 20vw;
-    padding-right: 20vw;
+    padding-left: 15vw;
+    padding-right: 15vw;
   }
   @media only screen and (max-width: 700px) {
     .previews {
-      margin-left: 10vw;
-      margin-right: 10vw;
+      margin-left: 0vw;
+      margin-right: 0vw;
     }
   }
 
@@ -43,6 +42,14 @@ const Styles = Styled.section`
   }
   .header {
     font-size: 30px;
+  }
+
+  .headerImage {
+    display: inline-block;
+    min-height: 250px;
+    max-height:250px;
+    min-width: 100%;
+    object-fit: cover;
   }
 `;
 
@@ -76,6 +83,9 @@ const BlogPage = props => {
       <div className="anti">
         <Header />
       </div>
+      <div>
+      <img className="headerImage" src={Ocean}/>
+    </div>
       <div className="general">
       <div className="body">
         <p className="header">Articles</p>

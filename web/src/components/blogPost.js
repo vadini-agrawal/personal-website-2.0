@@ -11,6 +11,7 @@ import Subscribe from './subscribe.js'
 const Styles = Styled.section`
     font-family: 'Zilla Slab', serif !important;
 
+    padding-top: 100px;
     padding-right: 20vw;
     padding-left: 20vw;
     .block-head {
@@ -20,11 +21,7 @@ const Styles = Styled.section`
     .inside {
         margin: auto;
     }
-    #header-img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-    }
+
     .subtitle {
         font-size: 21px;
     }
@@ -40,9 +37,14 @@ const Styles = Styled.section`
         text-align: center;
     }
     .content a {
-        color: orange;
+        color: #104d6c;
         text-decoration: none;
     }
+    .content a:hover {
+        color: #104d6c;
+        text-decoration: underline;
+    }
+
     p {
         
     }
@@ -50,7 +52,6 @@ const Styles = Styled.section`
 
 const BlogPost = (props) => {
     const { _rawBody, title, subtitle, mainImage, publishedAt, linkStub } = props;
-    const img = mainImage.asset.fluid.src;
     const m = moment(publishedAt).format('MMMM Do, YYYY');
 
     console.log(_rawBody);
@@ -59,7 +60,6 @@ const BlogPost = (props) => {
         <div className="block-head">
             <SEO title={title} description={subtitle} link={"https://www.vadiniagrawal.com/writing/"+linkStub}/>
             <div className="inside">
-                {img && <img id="header-img" src={img}></img>}
                 <div className="content">
                     <h1>{title}</h1>
                     <p className="subtitle">{subtitle}</p>
