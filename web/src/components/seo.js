@@ -10,7 +10,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 // import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({title}) {
+function SEO({title, description, link}) {
   // const { site } = useStaticQuery(
   //   graphql`
   //     query {
@@ -30,20 +30,20 @@ function SEO({title}) {
   return (
     <Helmet>
       <title>{title}</title>
-      <meta name="title" content="{title}"/>
-      <meta name="description" content="Vadini's landing page 🎊"/>
+      <meta name="title" content={title}/>
+      <meta name="description" content={description}/>
 
       <meta property="og:type" content="website"/>
-      <meta property="og:url" content="https://vadiniagrawal.com/"/>
+      <meta property="og:url" content={link}/>
       <meta property="og:title" content={title}/>
-      <meta property="og:description" content="Vadini's landing page 🎊"/>
-      <meta property="og:image" content="https://www.vadiniagrawal.com/mylogo.png"/>
+      <meta property="og:description" content={description}/>
+      <meta property="og:image" content="https://res.cloudinary.com/djd6rpum2/image/upload/v1607129667/mylogo_copy_gcg9qk.png"/>
 
       <meta property="twitter:card" content="summary_large_image"/>
-      <meta property="twitter:url" content="https://vadiniagrawal.com/"/>
+      <meta property="twitter:url" content={link}/>
       <meta property="twitter:title" content={title}/>
-      <meta property="twitter:description" content="Vadini's landing page 🎊"/>
-      <meta property="twitter:image" content="https://www.vadiniagrawal.com/mylogo.png"></meta>
+      <meta property="twitter:description" content={description}/>
+      <meta property="twitter:image" content="https://res.cloudinary.com/djd6rpum2/image/upload/v1607129667/mylogo_copy_gcg9qk.png"></meta>
 
       <meta name="google-site-verification" content="O7EJ9LUAxt7hpqldVaLBv8ypYQ2UmmXAcpKexw-VHyE" />
       <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />

@@ -3,6 +3,7 @@ import { graphql, useStaticQuery} from 'gatsby'
 import { mapEdgesToNodes } from '../lib/helpers'
 import BlogPostPreviewGrid from '../components/blog-post-preview-grid'
 import SEO from '../components/seo'
+import Subscribe from '../components/subscribe'
 import Layout from '../components/layout'
 import Styled from 'styled-components'
 import Header from '../components/header'
@@ -23,7 +24,7 @@ const Styles = Styled.section`
     padding-left: 10vw;
     padding-right: 10vw;
     height: auto;
-    margin-bottom: 4vh;
+    margin-bottom: 8vh;
   }
   .previews {
     padding-top: none;
@@ -71,7 +72,7 @@ const BlogPage = props => {
   const postNodes = mapEdgesToNodes(query.posts);
   return (
     <Styles>
-      <SEO title='Writing | Vadini Agrawal' />
+      <SEO title='Writing | Vadini Agrawal' description="Vadini's writing ✍🏽" link="https://www.vadiniagrawal.com/writing"/>
       <div className="anti">
         <Header />
       </div>
@@ -81,7 +82,6 @@ const BlogPage = props => {
         <div className="previews">
         {postNodes && postNodes.length > 0 && <BlogPostPreviewGrid nodes={postNodes} />}
         </div>
-        <p>More to come!</p>
       </div>
       <Footer />
       </div>

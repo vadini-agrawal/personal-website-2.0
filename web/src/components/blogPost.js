@@ -1,9 +1,12 @@
 // import { format, distanceInWords, differenceInDays } from 'date-fns'
 import React from 'react'
 import { Link } from 'gatsby'
+import SEO from './seo.js'
 import Styled from 'styled-components'
 import BlockContent from './block-content'
+import moment from 'moment'
 import "./layout.css"
+import Subscribe from './subscribe.js'
 
 const Styles = Styled.section`
     font-family: 'Zilla Slab', serif !important;
@@ -46,19 +49,24 @@ const Styles = Styled.section`
 `;
 
 const BlogPost = (props) => {
-    const { _rawBody, title, subtitle, mainImage, publishedAt } = props;
+    const { _rawBody, title, subtitle, mainImage, publishedAt, linkStub } = props;
     const img = mainImage.asset.fluid.src;
+    const m = moment(publishedAt).format('MMMM Do, YYYY');
+
     console.log(_rawBody);
     return (
         <Styles>
         <div className="block-head">
+            <SEO title={title} description={subtitle} link={"https://www.vadiniagrawal.com/writing/"+linkStub}/>
             <div className="inside">
-                <img id="header-img" src={img}></img>
+                {img && <img id="header-img" src={img}></img>}
                 <div className="content">
                     <h1>{title}</h1>
                     <p className="subtitle">{subtitle}</p>
+                    <p>Published {m}</p>
                     {_rawBody && <BlockContent blocks={_rawBody} />}
                 </div>
+                <Subscribe />
             </div>
         </div>
         </Styles>

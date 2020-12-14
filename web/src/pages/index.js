@@ -12,6 +12,7 @@ import Ocean from "../images/oceanblue.jpeg";
 import CurrentlyCurious from '../components/currentlyCurious';
 import CurrentlyExploring from '../components/currentlyExploring';
 import CurrentlyBuilding from "../components/currentlyBuilding"
+import Subscribe from "../components/subscribe"
 
 
 const Styles = Styled.section`
@@ -118,7 +119,7 @@ const Styles = Styled.section`
 const IndexPage = () => (
     // <SEO title="Home" />
     <Styles>
-    <SEO title='Home | Vadini Agrawal' />
+    <SEO title='Home | Vadini Agrawal' description="Vadini's landing page 🎊" link="https://www.vadiniagrawal.com"/>
     <div className="anti">
       <Header />
     </div>
@@ -140,6 +141,7 @@ const IndexPage = () => (
           <div className="cta">
             <Link to="/writing"><b>Check out my writing &#8594;</b></Link>
           </div>
+          <Subscribe />
           <Footer />
       </div>
 	  </div>

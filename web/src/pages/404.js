@@ -4,18 +4,18 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const Styles = Styled.section`
-font-family: 'Josefin Sans', sans-serif;
-  margin-top: 20vh;
+font-family: 'Zilla Slab', serif;
+margin-top: 20vh;
   height: 40vh;
   padding-top: 8vh;
   text-align: center;
   a {
     color: black;
     text-decoration: none;
-}
-a:hover {
-    color: orange;
-}
+  }
+  a:hover {
+    color: #104d6c;
+  }
 `;
 
 const NotFoundPage = () => (
