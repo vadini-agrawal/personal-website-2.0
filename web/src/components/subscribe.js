@@ -6,48 +6,48 @@ import MyLogo from '../images/mylogo.png';
 const Styles = Styled.section`
     margin: 0px;
     .input-box {
-        height: 40px;
-        width: 250px;
-        padding: 10px;
         border: 1px solid black;
-    }
-
-    .label {
+        height: 40px;
+        margin-left: 15px;
         margin-right: 15px;
+        padding: 10px;
+        width: 250px;
     }
 
     .submitButton {
-        border: 1px solid black;
-        margin-left: 15px;
-        width: 100px;
-        height: 30px;
         background-color: white;
+        border: 1px solid black;
+        height: 30px;
+        margin-top: 15px;
+        width: 100px;
     }
 
     @media only screen and (max-width: 800px) {
         .submitButton {
-            margin: 0px;
             margin-top: 15px;
+            margin: 0px;
         }
       }
 
     .submitButton:hover {
         background-color:  #104d6c;
-        color: white;
         border: none;
+        color: white;
     }
+        
+    .subscribe {
+        margin: 0px;
+        text-align: center;
+    }
+
     .powered {
-        text-decoration: none;
-        font-size: 12px;
         color: black;
+        font-size: 12px;
+        text-decoration: none;
     }
+
     .powered:hover {
         color: #104d6c;
-    }
-    .subscribe {
-        text-align: center;
-        margin: 0px;
-        margin-top: 20px;
     }
 `;
 
