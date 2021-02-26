@@ -30,10 +30,40 @@ const Styles = Styled.section`
     padding-left: 15vw;
     padding-right: 15vw;
   }
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 1200px) {
     .previews {
       margin-left: 0vw;
       margin-right: 0vw;
+      padding-left: 15vw;
+      padding-right: 15vw;
+    }
+    .body {
+      padding-left: 2vw;
+      padding-right: 2vw;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    .previews {
+      margin-left: 0vw;
+      margin-right: 0vw;
+      padding-left: 10vw;
+      padding-right: 10vw;
+    }
+    .body {
+      padding-left: 2vw;
+      padding-right: 2vw;
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    .previews {
+      margin-left: 0vw;
+      margin-right: 0vw;
+      padding-left: 0vw;
+      padding-right: 0vw;
+    }
+    .body {
+      padding-left: 2vw;
+      padding-right: 2vw;
     }
   }
 

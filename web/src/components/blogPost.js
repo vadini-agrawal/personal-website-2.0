@@ -11,9 +11,8 @@ import Subscribe from './subscribe.js'
 const Styles = Styled.section`
     font-family: 'Zilla Slab', serif !important;
 
-    padding-top: 100px;
-    padding-right: 20vw;
-    padding-left: 20vw;
+    padding-top: 70px;
+
     .block-head {
         display: flex;s
         margin-top: 15vh;
@@ -24,6 +23,10 @@ const Styles = Styled.section`
 
     .subtitle {
         font-size: 21px;
+    }
+    .content {
+        padding-left: 18vw;
+        padding-right: 18vw;
     }
     .content span {
         line-height: 30px;
@@ -45,8 +48,17 @@ const Styles = Styled.section`
         text-decoration: underline;
     }
 
-    p {
-        
+    .header {
+        padding-top: 35px;
+        padding-bottom: 35px;
+        padding-left: 18vw;
+        padding-right: 18vw;
+       background: rgb(16, 77, 108, 0.4);
+       margin-bottom: 15px;
+    }
+
+    .details p {
+        margin-bottom: 0px;
     }
 `;
 
@@ -61,10 +73,14 @@ const BlogPost = (props) => {
         <div className="block-head">
             <SEO title={title} description={subtitle} link={"https://www.vadiniagrawal.com/writing/"+linkStub}/>
             <div className="inside">
+                <div className="header">
+                        <h1>{title}</h1>
+                        <p className="subtitle">{subtitle}</p>
+                        <div className="details">
+                            <p>Published {m}</p>
+                        </div>
+                </div>
                 <div className="content">
-                    <h1>{title}</h1>
-                    <p className="subtitle">{subtitle}</p>
-                    <p>Published {m}</p>
                     {_rawBody && <BlockContent blocks={_rawBody} />}
                 </div>
                 <Subscribe />

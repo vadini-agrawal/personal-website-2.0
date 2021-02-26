@@ -8,10 +8,13 @@ import "./layout.css";
 
 const Styles = Styled.section`
   font-family: 'Zilla Slab', serif;
-
+  
   ul {
     list-style: none;
     margin-top: none;
+  }
+  li {
+    margin-top: 18px;
   }
 `;
 

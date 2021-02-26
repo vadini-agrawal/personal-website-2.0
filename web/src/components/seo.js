@@ -66,7 +66,19 @@ function SEO({title, description, link}) {
       <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
       <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
       <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
-
+      <link rel="stylesheet" type="text/css" href="https://cdn.analytics.highlyanalytics.com/tooltip.css" />
+			{/* <script async src="https://cdn.analytics.highlyanalytics.com/HAAnalytics.js"></script>
+      <script>
+      window.addEventListener("load", () => {
+        HAAnalytics.initHighly(
+        ["FACEBOOK","LINKEDIN","TWITTER","SAVE_HIGHLIGHT"],
+        ["FACEBOOK","LINKEDIN","TWITTER","SAVE_HIGHLIGHT"],
+        '#FFF59E',
+        true,
+        'HA-ee67e6a3-521d-4383-847e-2d7db0ac84d4'
+        )
+      });
+      </script> */}
     </Helmet>
   )
 }

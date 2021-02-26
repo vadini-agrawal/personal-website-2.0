@@ -59,22 +59,6 @@ module.exports = {
       // This object is used for configuration specific to this plugin
       pluginConfig: {
         // Puts tracking script in the head instead of the body
-        head: false,
-        // Setting this parameter is also optional
-        respectDNT: true,
-      },
-    },
-  },
-  {
-    resolve: `gatsby-plugin-google-gtag`,
-    options: {
-      // You can add multiple tracking ids and a pageview event will be fired for all of them.
-      trackingIds: [
-        process.env.GOOGLE_ANALYTICS_TRACKING, // Google Analytics / GA
-      ],
-      // This object is used for configuration specific to this plugin
-      pluginConfig: {
-        // Puts tracking script in the head instead of the body
         head: true,
         // Setting this parameter is also optional
         respectDNT: true,
@@ -96,6 +80,12 @@ module.exports = {
       defer: false,
     },
   },
-  
+  {
+    resolve: `gatsby-plugin-nprogress`,
+    options: {
+      // Disable the loading spinner.
+      showSpinner: true,
+    },
+  }
   ],
 }
