@@ -132,8 +132,8 @@ const IndexPage = () => (
           <h1> <b> Hi! I'm Vadini. </b></h1>
           <h5 className="callout"> <span className="emoji">🎊 </span> Welcome to my landing page. </h5>
           <h3> I'm an MS in CS at Georgia Tech. </h3> 
-          <p className="quote"> Previously SWE intern at Oscar Health & Product fellow with True Ventures</p>
-          <h4> Interested in how to make life more fulfilling </h4>
+          <p className="quote"> Looking for full-time software engineering roles at small to mid-size mission driven companies. See my resume <a href="https://drive.google.com/file/d/1uyLasmraQgtwjO4AcworwWKFFF2fSjgr/view?usp=sharing" target="_blank"><u>here</u></a>.</p>
+          <h4> Interested in using technology to innovate in broken systems. </h4>
           <hr></hr>
           { <CurrentlyBuilding /> }
           { <CurrentlyCurious />}
